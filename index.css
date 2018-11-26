@@ -1,0 +1,100 @@
+body {font-family:Arial,sans-serif;font-size:3vw;color:white;display:flex;flex-direction:column;height:100%; background-color: black;
+    justify-content:center;align-items:center;margin:0px 0px 0px 0px;overflow:hidden}
+#mainContainer{
+    width:60vw;
+    height:60vw;
+    margin:0px 0px 0px 0px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;    
+    transform-origin: center center;
+    transform-style: preserve-3D;
+}
+
+.circle{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    opacity: 0;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.fadeOut{animation:fadeOut;-moz-animation:fadeOut;-webkit-animation:fadeOut;
+    animation-duration:2s;animation-fill-mode:both}
+.fadeIn{animation:fadeIn;-moz-animation:fadeIn;-webkit-animation:fadeIn;
+    animation-duration:2s;animation-fill-mode:both}
+.grayOut{animation:greyOut;-moz-animation:greyOut;-webkit-animation:fadeIn;
+    animation-duration:1s;animation-fill-mode:both}
+.circleIn{animation:circleIn;-moz-animation:circleIn;-webkit-animation:circleIn;
+    animation-duration:.5s;animation-fill-mode:both}
+.circleOut{animation:circleOut;-moz-animation:circleOut;-webkit-animation:circleOut;
+    animation-duration:.5s;animation-fill-mode:both}
+.rotate {animation:rotate;-moz-animation:rotate;-webkit-animation:rotate; animation-timing-function: linear;
+    animation-duration:12s;animation-fill-mode:both}
+.rotate2{animation:rotate;-moz-animation:rotate;-webkit-animation:rotate;
+    animation-duration:.1s;animation-fill-mode:both}
+      
+@keyframes fadeOut {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+@keyframes circleIn {
+    from {opacity: 0; height: 0px; width: 0px;}
+    to {opacity: 1; height: 25px; width: 25px;}
+}
+@keyframes circleOut {
+    from {height: 25px; width: 25px; opacity:1}
+    to {height: 0px; width: 0px; opacity:1}
+}
+@keyframes rotate {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
+
+@-moz-keyframes fadeOut {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+@-moz-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+@-moz-keyframes circleIn {
+    from {opacity: 0; height: 0px; width: 0px;}
+    to {opacity: 1; height: 25px; width: 25px;}
+}
+@-moz-keyframes circleOut {
+    from {height: 25px; width: 25px; opacity:1}
+    to {height: 0px; width: 0px; opacity:1}
+}
+@-moz-keyframes rotate {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
+
+@-webkit-keyframes fadeOut {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+@-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+@-webkit-keyframes circleIn {
+    from {opacity: 0; height: 0px; width: 0px;}
+    to {opacity: 1; height: 25px; width: 25px;}
+}
+@-webkit-keyframes circleOut {
+    from {height: 25px; width: 25px; opacity:1}
+    to {height: 0px; width: 0px; opacity:1}
+}
+@-webkit-keyframes rotate {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
