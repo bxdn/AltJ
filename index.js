@@ -23,6 +23,7 @@ function fadeAudio(){
 
 function circleListener(circ1,circ2){
     circ1.classList.add('circleOut');
+    circ2.style.display = "block";
     circ2.classList.add('circleIn');
 }
 
@@ -74,8 +75,9 @@ function addListeners(){
                 buttons[i].classList.remove('circleOut','circleIn');
                 reflow(buttons[i]);
                 buttons[i].classList.add('circleOut');
-                buttons[4].classList.add('circleIn');
             }
+            buttons[4].style.display = 'block';
+            buttons[4].classList.add('circleIn');
         },13000);
     });
     buttons[9].addEventListener("mouseenter", function(){
@@ -117,11 +119,17 @@ function introText(){
 
 function initialize(){
     addListeners();
-    //introText();
-    //setTimeout(()=>{fadeAudio()},12000);
-    //setTimeout(()=>{document.getElementById('circle1').classList.add('circleIn');},14000);
+    /*introText();
+    setTimeout(()=>{fadeAudio()},12000);
+    setTimeout(()=>{
+        document.getElementById('circle1').classList.add('circleIn');
+        document.getElementById('circle1').style.display = 'block';
+    },13000);*/
     setTimeout(()=>{fadeAudio()},1000);
-    setTimeout(()=>{document.getElementById('circle1').classList.add('circleIn');},2000);
+    setTimeout(()=>{
+        document.getElementById('circle1').classList.add('circleIn');
+        document.getElementById('circle1').style.display = 'block';
+    },2000);
 }
 
 function main(){
