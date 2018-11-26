@@ -40,17 +40,19 @@ function addListeners(){
     }
     for(let i=0; i<3; i++){
         const audId = "circle"+(i+1).toString()+"Aud";
-        buttons[i].addEventListener("click", function(){
+        buttons[i].addEventListener("mouseenter", function(){
             circleListener(buttons[i],buttons[i+1]);
             document.getElementById(audId).play();
         });
     }
     for(let i=4; i<9; i++){
-        buttons[i].addEventListener("click", function(){
+        const audId = "circle"+(i+1).toString()+"Aud";
+        buttons[i].addEventListener("mouseenter", function(){
             circleListener(buttons[i],buttons[i+1]);
+            document.getElementById(audId).play();
         });
     }
-    buttons[3].addEventListener("click", function(){
+    buttons[3].addEventListener("mouseenter", function(){
         buttons[3].classList.add('circleOut');
         document.getElementById("circle4Aud").play();
         setTimeout(()=>{
@@ -76,21 +78,26 @@ function addListeners(){
             }
         },13000);
     });
-    buttons[9].addEventListener("click", function(){
+    buttons[9].addEventListener("mouseenter", function(){
         buttons[9].classList.add('circleOut');
+        document.getElementById("circle10Aud").play();
         setTimeout(()=>{
-            for(let i = 0; i < 10; i++){
-                mainCont.classList.remove('rotate');
-                reflow(mainCont);
-                mainCont.classList.add('rotate');
+            mainCont.classList.remove('rotate');
+            reflow(mainCont);
+            mainCont.classList.add('rotate');
+            for(let i = 4; i < 10; i++){
                 buttons[i].classList.remove('circleIn');
                 buttons[i].classList.remove('circleOut');
-                buttons[i].classList.add('circleIn');
                 var clearButton = buttons[i].cloneNode(true);
                 buttons[i].parentNode.replaceChild(clearButton, buttons[i]);
                 buttons[i] = clearButton
+                buttons[i].classList.add('circleIn');
             }
-        },1000);
+            buttons[0].classList.add('circ1');
+            buttons[1].classList.add('circ1');
+            buttons[2].classList.add('circ2');
+            buttons[3].classList.add('circ2');
+        },500);
     })
 }
 

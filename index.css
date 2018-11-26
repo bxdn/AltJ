@@ -1,8 +1,8 @@
 body {font-family:Arial,sans-serif;font-size:3vw;color:white;display:flex;flex-direction:column;height:100%; background-color: black;
     justify-content:center;align-items:center;margin:0px 0px 0px 0px;overflow:hidden}
 #mainContainer{
-    width:60vw;
-    height:60vw;
+    width:45vw;
+    height:45vw;
     margin:0px 0px 0px 0px;
     display:flex;
     flex-direction:column;
@@ -35,10 +35,8 @@ body {font-family:Arial,sans-serif;font-size:3vw;color:white;display:flex;flex-d
     animation-duration:12s;animation-fill-mode:both}
 .rotate2{animation:rotate;-moz-animation:rotate;-webkit-animation:rotate;
     animation-duration:.1s;animation-fill-mode:both}
-.hex{
-    animation:hex;-moz-animation:hex;-webkit-animation:hex; animation-timing-function: linear;
-        animation-duration:12s;animation-fill-mode:both;motion-path:polygon(50% 0, 100% 75%, 100% 25%, 50% 100%, 0% 25%, 0% 75%)
-    }
+.circ1{animation:circ1 12s, circleIn .5s;-moz-animation:circ1 12s, circleIn .5s;-webkit-animation:circ1 12s, circleIn .5s;animation-fill-mode:both;}
+.circ2{animation:circ2 12s, circleIn .5s;-moz-animation:circ2 12s, circleIn .5s;-webkit-animation:circ2 12s, circleIn .5s;animation-fill-mode:both;}
 
 @keyframes fadeOut {
     from {opacity: 1}
@@ -60,9 +58,13 @@ body {font-family:Arial,sans-serif;font-size:3vw;color:white;display:flex;flex-d
     from {transform: rotate(0deg)}
     to {transform: rotate(360deg)}
 }
-@keyframes hex {
-    from {motion-offset:0}
-    to {motion-offset:1}
+@keyframes circ1 {
+    from {top:25%}
+    to {top:12%}
+}
+@keyframes circ2 {
+    from {top:75%}
+    to {top:88%}
 }
 
 @-moz-keyframes fadeOut {
@@ -85,9 +87,13 @@ body {font-family:Arial,sans-serif;font-size:3vw;color:white;display:flex;flex-d
     from {transform: rotate(0deg)}
     to {transform: rotate(360deg)}
 }
-@-moz-keyframes hex {
-    from {motion-offset:0}
-    to {motion-offset:1}
+@-moz-keyframes circ1 {
+    from {top:25%}
+    to {top:12%}
+}
+@-moz-keyframes circ2 {
+    from {top:75%}
+    to {top:88%}
 }
 
 @-webkit-keyframes fadeOut {
@@ -109,8 +115,12 @@ body {font-family:Arial,sans-serif;font-size:3vw;color:white;display:flex;flex-d
 @-webkit-keyframes rotate {
     from {transform: rotate(0deg)}
     to {transform: rotate(360deg)}
+}    
+@-webkit-keyframes circ1 {
+    from {top:25%}
+    to {top:12%}
 }
-@-webkit-keyframes hex {
-    from {motion-offset:0}
-    to {motion-offset:1}
+@-webkit-keyframes circ2 {
+    from {top:75%}
+    to {top:88%}
 }
